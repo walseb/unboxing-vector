@@ -53,7 +53,7 @@ module Data.Vector.Unboxing
   ,unzip,unzip3,unzip4,unzip5,unzip6
   -- * Working with predicates
   -- ** Filtering
-  ,filter,ifilter,uniq,mapMaybe,imapMaybe,filterM,takeWhile,dropWhile
+  ,filter,ifilter,uniq,mapMaybe,imapMaybe,filterM,mapMaybeM,takeWhile,dropWhile
   -- ** Partitioning
   ,partition,unstablePartition,span,break
   -- ** Searching
@@ -522,6 +522,10 @@ imapMaybe = G.imapMaybe
 filterM :: (Monad m, Unboxable a) => (a -> m Bool) -> Vector a -> m (Vector a)
 filterM = G.filterM
 {-# INLINE filterM #-}
+
+mapMaybeM :: (Monad m, Unboxable a, Unboxable b) => (a -> m (Maybe b)) -> Vector a -> m (Vector b)
+mapMaybeM = G.mapMaybeM
+{-# INLINE mapMaybeM #-}
 
 takeWhile :: (Unboxable a) => (a -> Bool) -> Vector a -> Vector a
 takeWhile = G.takeWhile
