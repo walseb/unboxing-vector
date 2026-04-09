@@ -11,7 +11,7 @@
 {-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS_HADDOCK hide #-}
 module Data.Vector.Unboxing.Internal
-  (Unboxable(Rep)
+  (Unboxable(..)
   ,Vector(UnboxingVector)
   ,MVector(UnboxingMVector)
   ,Generics(..)

@@ -2,7 +2,7 @@ module Data.Vector.Unboxing.Mutable
   (MVector
   ,IOVector
   ,STVector
-  ,Unboxable(Rep)
+  ,Unboxable(..)
   ,Generics(..)
   ,Enum(..)
   ,EnumRep(..)

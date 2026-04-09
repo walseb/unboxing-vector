@@ -1,7 +1,7 @@
 {-# LANGUAGE RankNTypes #-}
 module Data.Vector.Unboxing
   (Vector
-  ,Unboxable(Rep)
+  ,Unboxable(..)
   ,Generics(..)
   ,Enum(..)
   ,EnumRep(..)
